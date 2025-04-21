@@ -6,8 +6,12 @@ import { fetchPlaceDetails } from "../util/database";
 
 function PlaceDetails({ route, navigation }) {
   const [fetchedPlace, setFetchedPlace] = useState(null);
+
   function showOnMapHandler() {
-    console.log("Showing map...");
+    navigation.navigate("Map", {
+      initialLat: fetchedPlace.lat,
+      initialLong: fetchedPlace.lng,
+    });
   }
 
   const selectedPlaceId = route.params.placeId;
@@ -37,7 +41,7 @@ function PlaceDetails({ route, navigation }) {
         <View style={styles.addressContainer}>
           <Text style={styles.address}>{fetchedPlace.address}</Text>
         </View>
-        <OutlinedButton>View on Map</OutlinedButton>
+        <OutlinedButton onPress={showOnMapHandler}>View on Map</OutlinedButton>
       </View>
     </ScrollView>
   );
