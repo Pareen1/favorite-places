@@ -115,7 +115,7 @@ function LocationPicker({ onPickLocation }) {
           Locate User
         </OutlinedButton>
         <OutlinedButton icon="map" onPress={pickOnMapHandler}>
-          Pick on Mape
+          Pick on Map
         </OutlinedButton>
       </View>
     </View>

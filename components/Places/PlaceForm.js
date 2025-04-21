@@ -31,7 +31,7 @@ function PlaceForm({ onCreatePlace }) {
   return (
     <ScrollView style={styles.form}>
       <View>
-        <Text style={styles.label}>label</Text>
+        <Text style={styles.label}>Label</Text>
         <TextInput
           onChangeText={changeTitleHandler}
           value={enteredTitle}
